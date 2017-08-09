@@ -7,7 +7,7 @@ $exploded = explode('/', trim($uri, ' '));
 $json_url = "http://itnthackathon.bweas.tm.com.my/api/getTMPointInfo";
 $json = file_get_contents($json_url);
 $data = json_decode(callAPI($json_url));
-$param= trim($exploded[3]);
+$param= trim($exploded[2]);
 echo convertJSON($data->{'getTMPointInfo'}->{'records'}[$param]);
 
 
