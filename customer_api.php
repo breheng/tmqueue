@@ -1,5 +1,5 @@
 <?php
-
+header('Access-Control-Allow-Origin: *');  
 include 'httpful.phar';
 $uri = $_SERVER['REQUEST_URI'];
 $exploded = explode('/', trim($uri, ' '));
