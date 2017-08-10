@@ -4,7 +4,7 @@ include 'httpful.phar';
 $uri = $_SERVER['REQUEST_URI'];
 $exploded = explode('/', trim($uri, ' '));
 $uri2=$exploded[2];
-$json_url = "http://itnthackathon.bweas.tm.com.my/api/getSiebelCustInfo2?filter=IC_No,ew,".$uri2;
+$json_url = "http://172.30.201.238:8080/api/neceolite_cust_info2?filter=IC_No,ew,".$uri2;
 $json = file_get_contents($json_url);
 $data = json_decode(callAPI($json_url));
 //$param= trim($exploded[3]);
